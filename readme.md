@@ -1,4 +1,5 @@
 # Webcam 24-Hour Recording and Saving Script
+It can have different good or bad use cases but for me I wanted to always keep an eye on my desk.
 
 This project contains two scripts to record camera footage continuously for 24 hours and save the recordings. The `index.js` file starts the gstreamer tcp stream and the `gst_tcp_rcv.js` file receives the tcp stream and saves the recording using ffmpeg.
 So you need to have `Gstreamer` and `FFmpeg` installed in your system.
