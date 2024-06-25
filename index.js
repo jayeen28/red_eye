@@ -1,16 +1,15 @@
 const LiveCam = require('./livecam');
-const path = require('path');
 
 const webcam_server = new LiveCam
     ({
         // address and port of the webcam UI
-        'ui_addr': '0.0.0.0',
+        'ui_addr': '127.0.0.1',
         'ui_port': 11000,
 
         // address and port of the webcam Socket.IO server
         // this server broadcasts GStreamer's video frames
         // for consumption in browser side.
-        'broadcast_addr': '192.168.0.101',
+        'broadcast_addr': '127.0.0.1',
         'broadcast_port': 12000,
 
         // address and port of GStreamer's tcp sink
