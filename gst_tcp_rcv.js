@@ -33,11 +33,11 @@ const ffmpegProcess = ffmpeg(`tcp://${gst_tcp_host}:${gst_tcp_port}`)
 // Event listener for the target connection ending
 target.on('end', () => {
     console.log('disconnected from target');
+    ffmpegProcess.kill('SIGINT');
 });
 
 function cleaner() {
     target.end();
-    ffmpegProcess.kill('SIGINT');
 }
 
 process.on('SIGINT', () => cleaner());
